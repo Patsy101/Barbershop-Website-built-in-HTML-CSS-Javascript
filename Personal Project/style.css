@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/*all*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  background-color: #FFC107;
+  color: #000000;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index:-1;
+}
+
+.Greetings{
+  font-size: 200px; 
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid orange;
+  animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
+  
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  80% { border-color: orange }
+}
+
+/*Form for Book Now*/
+
+
+
+
+    
+/*body*/
+body{
+     
+ font-size: 16px;
+ font-family: 'Work Sans', sans-serif;
+ color: #ffffff;
+  margin:0;
+  padding:0;
+        
+      
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(100px);
+    position: fixed;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 25rem;
+    z-index: 10;
+    position:fixed;
+    transition: top 0.3s;
+    
+  }
+ 
+/*Home, Menu, Contact number and Maps are ul/li*/
+  .nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    
+  }
+
+  
+/*size control of navbar font size can be adjusted*/
+  .nav-link, .logo {
+  
+    color: #050404;
+    font-size: 2.3rem;
+    font-family: 'Tahoma', sans-serif;
+    text-transform: uppercase;
+    transition: 350ms cubic-bezier(0.65, 0, 0.35, 1);
+  }
+ 
+  
+/*Change color on Hover list and logo */
+  .navbar, .logo:hover{
+    background-color: bisque;
+    color: black;
+  }
+  .navbar, .nav-link:hover{
+    background-color: bisque;
+    color: black;
+  }
+
+
+
+img{
+    width: 100%;
+    display: block;
+}
+
+/*Title our services*/
+.title-wrap{
+    text-align: center;
+    padding: 1.0rem 0;
+    margin-bottom: 2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+  /*Maintitle-picture-Section*/
+
+  .Picture {
+  min-height: 100vh;
+  
+    background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("Barbershop\ VR\ Experience.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+/*This is section like div*/
+section {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+}
+
+/* featured and email newsletter */
+
+
+.featured-item{
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    -webkit-transition: var(--trans);
+    -o-transition: var(--trans);
+    transition: var(--trans);
+   display:flex;
+   max-width: 100%;
+}
+.featured-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: -o-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+}
+/* putting the description inside the picture*/
+.featured-item-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    color: #fff;
+    width: 100%;
+    padding: 2rem;
+    -webkit-transform: translateY(68%);
+    -ms-transform: translateY(68%);
+    transform: translateY(68%);
+    -webkit-transition: var(--trans);
+    -o-transition: var(--trans);
+    transition: var(--trans);
+}
+
+
+.featured-item-content span{
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+}
+.featured-item-content .text{
+    color: #fff;
+    -webkit-transition: var(--trans);
+    -o-transition: var(--trans);
+    transition: var(--trans);
+}
+.featured-item:hover .featured-item-content{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+/* When i minimise*/
+@media screen and (max-width:49px){
+    .featured-item-content{
+        transform:translate(68%);
+        grid-template-columns:no-repeat(2,1fr);
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    
+    .featured-row{
+        
+        display:flex;
+        grid-template-columns:no-repeat(3,1fr);
+        grid-auto-rows: minmax(20px, auto);
+        gap: 2rem;
+        width: 100%;
+        height:75vh;
+        background-size: cover;
+        background-position: center center;
+       
+       
+    }
+}
+
+
+
+
+
+/* contact */
+
+.Phone-Number{background-color:rgba(0, 0, 0, 0.822);
+  
+  
+}
+
+
+
+.container-2{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:0;
+  border:burlywood;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+  border:burlywood;
+}
+
+.left{
+	background: url("icon4.png") no-repeat center;
+  color: #ffffff;
+	background-size: cover;
+	height: 100%;
+  font-size: 25;
+  
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: burlywood;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.132);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+/* text converter */
+.voice_to_text{
+  
+  text-align: center;
+}
+/* Message Us function */
+#convert_text{
+  width:100%;
+  height:200px;
+  resize: none;
+  resize: horizontal none;
+  padding:10px;
+  font-size:20px;
+  margin-bottom: 10px;
+}
+/* button for Voice to Text */
+button{
+  width: 470px;
+  text-align: center;
+  padding:12px 20px;
+  background-color: burlywood;
+  border:0;
+  border-radius: 5px;
+  cursor: pointer;
+  color:black;
+ 
+
+}
+
+#Submit{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: burlywood;
+	color: #000000;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+#VR-Experience{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color:rgba(0, 0, 255, 0.164);
+	color: #000000;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.container_Oscar{
+ width: 100%;
+ height:100vh;
+ background:#3c5077;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+.popup_modal{
+  width:400px;
+  background:#fff;
+  border-radius:6px;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-50%) scale(1);
+  text-align:center;
+  padding:0 30px 30px;
+  color:#333;
+  visibility: hidden;
+  transition:transform 0.4s, top 0.4s;
+}
+.open-popup{
+  visibility:visible;
+  top:50%;
+  transform:translate(-50%,-50%) scale(1);
+}
+.popup_modal img{
+ 
+  margin-top:50px;
+  border-radius: 25%;
+  box-shadow:0 2px 5px rgba(0,0,0,0);
+}
+.popup_modal h2{
+  font-size: 38px;
+  font-weight:500;
+  margin: 30px 0 10px;
+
+}
+.popup_modal button{
+  width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: rgba(0, 0, 255, 0.459);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+  box-shadow:0 2px 5px rgba(0,0,0,0);
+}
+
+.btn_Oscar{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: burlywood;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+
+
+
+
+.btn_Oscar{
+  background-color:rgba(0, 0, 255, 0.459);
+}
+.btn:hover{
+    background-color: burlywood;
+}
+
+
+.container-3 {
+  --light-color: #fff;
+  height: 420px;
+  width: 350px;
+  background: var(--light-color);
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  box-shadow: 0px 0px 15px 0px black;
+  align-items:center;
+  overflow: hidden;
+  border:none;
+  
+}
+.container.collapse{
+  height:60px;
+  width:150px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border:none;
+}
+
+
+
+
+
+.chat-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+  background-color: #0652c0;
+  color: var(--light-color);
+  font-size: 1.5rem;
+  cursor:pointer;
+  
+}
+
+.chat-header .logo {
+  height: 35px;
+  width: 35px;
+  box-shadow: 0px 0px 10px 0px black;
+}
+.chat-header img {
+  height: 100%;
+  width: 100%;
+}
+.chat-header .title {
+  padding-left: 10px;
+}
+/* this is where if the user type something it will appear on chat flex direction is very important to be column*/
+.chat-body {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  align-items: flex-end;
+  overflow: hidden;
+  overflow-y: auto;
+  position:relative;
+}
+.chat-input {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+.input-sec {
+  flex: 9;
+}
+.send {
+  flex: 1;
+  padding-right: 4px;
+}
+#txtInput {
+  line-height: 30px;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  caret-color: black;
+  font-size: 1rem;
+  width: 100%;
+}
+/* user message have some sort of design*/
+.chatbot-message,
+.user-message {
+  padding: 8px;
+  background: #ccc;
+  margin: 5px;
+  width: max-content;
+  border-radius: 10px 3px 10px 10px;
+  animation: fade-in-right 0.3s ease-in-out both;
+}
+.chatbot-message {
+  background: #0652c0;
+  color: burlywood;
+  align-self: flex-start;
+  border-radius: 10px 10px 3px 10px;
+  transform:translate(-50%);
+  opacity: 0;
+}
+
+.chat-body .loading{
+  position:absolute;
+  bottom: 5%;
+  left:2%;
+  z-index: 999 ;
+}
+
+
+/* this makes the message looks like it is seemless*/
+@keyframes fade-in-right{
+0%{
+  transform:translate(50%);
+  opacity: 0;
+}
+100%{
+  transform:translate(0%);
+  opacity:1;
+}
+}
+@keyframes fade-in-left{
+  0%{
+    transform:translate(-50%);
+    opacity: 0;
+  }
+  100%{
+    transform:translate(0%);
+    opacity:1;
+  }
+  }
+
+  
+ 
+
+
+
+
+
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+footer {
+  background-color: rgb(252, 252, 252) ;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+}
+
+
+ 
+
