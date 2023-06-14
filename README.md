@@ -8,7 +8,7 @@ Welcome to the Barbershop Website repository! This project showcases a fully fun
 
 - **Subtle Ads:** The website includes subtle advertisements strategically placed to promote products or services related to the barbershop.
 
-- **Chatbot:** We have integrated a chatbot feature to enhance user engagement and provide assistance or answer frequently asked questions.
+- **Chatbot:** I have integrated a chatbot feature to enhance user engagement and provide assistance or answer frequently asked questions.
 
 - **360 Experience Picture:** Experience a 360-degree view of the barbershop by interacting with an immersive picture.
 
