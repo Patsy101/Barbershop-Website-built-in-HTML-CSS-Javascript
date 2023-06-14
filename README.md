@@ -1,5 +1,5 @@
 # Mission-2-Final
-Added text to speech recognition
+
 # Barbershop Website
 
 Welcome to the Barbershop Website repository! This project showcases a fully functional and interactive website for a barbershop, all within a single page. It incorporates several exciting features, including subtle ads, a chatbot, a 360-degree experience picture, voice-to-text feature, and a pop-up modal box.
@@ -23,7 +23,7 @@ The website is built using the following technologies:
 - HTML
 - CSS
 - JavaScript
-Contact
+
 
 If you have any questions or feedback, feel free to reach out:
 
